@@ -5,7 +5,7 @@ import '../model/todo.dart';
 class ItemController extends GetxController {
   var items = ''.obs;
   List todoList = [].obs;
-  RxBool taskDone = false.obs;
+
 
   void addTodoItem(String item) {
     todoList.add(ToDo(
@@ -14,9 +14,7 @@ class ItemController extends GetxController {
   }
 
   void handleTodoChange(ToDo todo) {
-    bool isdone = todo.isDone;
-    isdone = !isdone;
-    taskDone.value = isdone;
+   todo.isDone= !todo.isDone;
   }
 
   void deleteTodoItem(String id) {
