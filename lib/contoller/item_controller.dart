@@ -9,7 +9,7 @@ class ItemController extends GetxController {
 
   void addTodoItem(String item) {
     todoList.add(ToDo(
-        id: DateTime.now().millisecondsSinceEpoch.toString(), todoText: item, isDone: taskDone.isTrue));
+        id: DateTime.now().millisecondsSinceEpoch.toString(), todoText: item));
     items.value = item;
   }
 
